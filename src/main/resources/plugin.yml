@@ -1,0 +1,25 @@
+name: RealisticSurvival
+version: '1.0.0'
+main: com.realmc.RealMCPlugin
+api-version: '1.20'
+author: RealMC
+description: >
+  생존 현실성(체온/무게/수영/부상), 랜덤 재난(폭우/지진/해일/폭설),
+  그리고 150일 이후 등장하는 적대 세력 시스템을 더하는 플러그인.
+
+commands:
+  룰:
+    description: 서버 생존 규칙과 팁을 보여줍니다.
+    aliases: [rule, rules, 규칙]
+  재난:
+    description: (관리자) 재난을 강제로 발생시킵니다.
+    permission: realmc.admin
+    usage: /재난 <폭우|지진|해일|폭설|가뭄|산불>
+  생존정보:
+    description: 자신의 생존 상태(체온/부상/무게)를 확인합니다.
+    aliases: [survivalinfo, status]
+
+permissions:
+  realmc.admin:
+    description: RealisticSurvival 관리자 명령어 사용 권한
+    default: op

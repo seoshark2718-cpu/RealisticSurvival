@@ -1,0 +1,62 @@
+# ================================
+# RealisticSurvival 설정 파일
+# 서버 취향에 맞게 숫자를 조절하세요.
+# ================================
+
+general:
+  disable-vanilla-hostile-mobs: true   # 좀비/스켈레톤 등 바닐라 적대 몹 자연스폰 금지
+
+temperature:
+  enabled: true
+  tick-interval-seconds: 5
+  min: 0
+  max: 100
+  neutral: 50
+  cold-threshold: 25      # 이 이하면 저체온 디버프 시작
+  hot-threshold: 75       # 이 이상이면 더위 디버프 시작
+  hypothermia-damage: 25  # 이 이하로 떨어지면 지속 피해 시작
+
+weight:
+  enabled: true
+  tick-interval-seconds: 2
+  slow-threshold: 70       # 인벤토리 부하가 이 %를 넘으면 느려짐
+
+swim:
+  enabled: true
+  cold-water-temp-penalty: 3   # 틱마다 물속에서 체온 추가 감소량
+  fatigue-after-seconds: 45    # 이 시간 이상 수영하면 피로(채굴피로) 부여
+
+injury:
+  enabled: true
+  bleed-chance-on-hit: 0.35     # 몹에게 맞을 때 출혈 발생 확률
+  bleed-damage-interval-seconds: 4
+  infection-after-seconds: 90   # 출혈 방치 시 감염 전환까지 걸리는 시간
+
+weather:
+  enabled: true
+  rain-slowness-amplifier: 0    # 0 = 약한 감속, 1 = 강한 감속
+
+disaster:
+  enabled: true
+  check-interval-minutes: 20
+  chance-per-check: 0.25        # 체크마다 재난이 발생할 확률
+  min-severity: 0.5
+  max-severity: 2.0
+  types: [HEAVY_RAIN, EARTHQUAKE, TSUNAMI, SNOWSTORM, DROUGHT, WILDFIRE]
+
+monsters:
+  enabled: true
+  spawn-tick-interval-seconds: 15
+  spawn-chance: 0.4
+  max-nearby-per-player: 6
+
+factions:
+  enabled: true
+  unlock-day: 150
+  spawn-interval-seconds: 60
+  base-spawn-chance: 0.3
+  max-alive-server-wide: 25
+  min-distance-from-player: 20
+  max-distance-from-player: 45
+  foreboding-hint-days-before: 10   # 150일 전 몇 일부터 불길한 징조를 줄지
+  boss-unlock-day: 300
